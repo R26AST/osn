@@ -81,7 +81,7 @@ $('.submit').click(function () {
 								success('Anda berhasil masuk');
 								Cookies.set('user', userData["user"], { expires: 365 });
 								cekCookie();
-								setTimeout(function() {window.location.replace('./dasbor');}, 2301);
+								setTimeout(function() {window.location.replace('dasbor');}, 2301);
 								
 							}
 							else {
