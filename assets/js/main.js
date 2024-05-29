@@ -1,3 +1,10 @@
+/*=============== DISABLE BACK ===============*/
+function preventBack() { 
+	window.history.forward();  
+} 
+setTimeout("preventBack()", 0); 
+window.onunload = function () { null };
+
 /*=============== SHOW HIDE - LOGIN & REGISTER FORM ===============*/
 const loginForm = document.getElementById('login-form'),
   registerForm = document.getElementById('register-form'),
