@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+	<link rel="stylesheet" href="./assets/css/notif.css" />
+	
+	<!--=============== JS ===============-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <!--==================== LOGIN & REGISTER ====================-->
+    <section class="form__wrapper">
+      <!-- Login Form -->
+      <form action="" class="form form-active" id="login-form">
+        <h1 class="form__title">Login</h1>
+        <p class="form__subtitle">Silakan login dengan akun yang Anda miliki.</p>
+		
+        <div class="form__content">
+          <div class="form__box">
+            <i class="ri-user-line form__icon"></i>
+
+            <div class="form__box-input">
+              <input type="text" class="form__input user" placeholder=" " id="login-user"/>
+              <label for="login-user" class="form__label">Pengguna</label>
+            </div>
+          </div>
+
+          <div class="form__box">
+            <i class="ri-lock-2-line form__icon"></i>
+
+            <div class="form__box-input">
+              <input type="password" class="form__input pass" placeholder=" " id="login-pass"/>
+              <label for="login-pass" class="form__label">Kata Sandi</label>
+
+              <i class="ri-eye-off-line form__eye" id="login-eye"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="form__check">
+          <div class="form__check-group">
+            <input type="checkbox" class="form__check-input" />
+            <label for="" class="form__check-label">Ingat Saya</label>
+          </div>
+
+          <a href="#" class="form__forgot">Lupa Password?</a>
+        </div> -->
+
+        <button type="button" class="form__button submit">Masuk</button>
+
+        <!-- <p class="login__register">
+          Tidak memiliki akun? <span id="register-btn">Daftar</span>
+        </p> --
+        <span class="fi fi-id"></span> -->   
+      </form>
+
+      <!-- Register Form -->
+      <form action="" class="form" id="register-form">
+        <h1 class="form__title">Daftar</h1>
+
+        <div class="form__content">
+          <div class="form__box">
+            <i class="ri-user-line form__icon"></i>
+
+            <div class="form__box-input">
+              <input type="text" class="form__input" placeholder=" " />
+              <label for="" class="form__label">Pengguna</label>
+            </div>
+          </div>
+
+          <div class="form__box">
+            <i class="ri-mail-line form__icon"></i>
+
+            <div class="form__box-input">
+              <input type="email" class="form__input" placeholder=" " />
+              <label for="" class="form__label">Email</label>
+            </div>
+          </div>
+
+          <div class="form__box">
+            <i class="ri-lock-2-line form__icon"></i>
+
+            <div class="form__box-input">
+              <input type="password" class="form__input" placeholder=" " id="register-pass" />
+              <label for="" class="form__label">Kata Sandi</label>
+
+              <i class="ri-eye-off-line form__eye" id="register-eye"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__check">
+          <div class="form__check-group">
+            <input type="checkbox" class="form__check-input" />
+            <label for="" class="form__check-label"
+              >Saya menerima seluruh ketentuan yang ada.</label
+            >
+          </div>
+        </div>
+
+        <button type="submit" class="form__button">Daftar</button>
+
+        <p class="login__register">
+          Sudah memiliki akun? <span id="login-btn">Login</span>
+        </p>
+      </form>
+	  
+	  
+	<div class="notifications">
+        
+    </div>
+	  
+    </section>
+
+    <!--=============== JS ===============-->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/notif.js"></script>
+	<script src="./assets/js/app.js"></script>
+
+  </body>
+</html>
