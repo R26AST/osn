@@ -72,7 +72,13 @@ $('.submit').click(function () {
 							if($('.pass').val() == userData["password"]) {
 								console.log("success");
 								success('Anda berhasil masuk');
-								Cookies.set('lastLogin', new Date(), { expires: 7 })
+								if(Cookies.get('terakhirLogin') != null || Cookies.get('terakhirLogin') != "undefined" || Cookies.get('terakhirLogin') != '') {
+									Cookies.set('pertamaLogin', new Date());
+									Cookies.set('terakhirLogin', new Date(), { expires: 365 });
+								}
+								else {
+									Cookies.set('terakhirLogin', new Date(), { expires: 365 });
+								}
 								setTimeout(function() {window.location.replace('./dasbor');}, 2301);
 								
 							}
