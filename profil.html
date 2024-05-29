@@ -331,9 +331,9 @@
 
 <script>
 $(document).ready(function() {
-	$('.pertamaLog').text(Cookies.get('pertamaLoogin'));
+	$('.pertamaLog').append(Cookies.get('pertamaLoogin'));
 
-	$('terakhirLog').text(Cookies.get('terakhirLoogin'));
+	$('terakhirLog').append(Cookies.get('terakhirLoogin'));
 });
 </script>
 
