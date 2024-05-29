@@ -99,3 +99,16 @@ $('.submit').click(function () {
 			});		
 		}
 });
+
+function cekCookie() {
+  let log = Cookies.get('terakhirLogin');
+  if (log != "") {
+    Cookies.set('terakhirLogin', new Date(), { expires: 365 });
+  } else {
+    Cookies.set('pertamaLogin', new Date());
+    Cookies.set('terakhirLogin', new Date(), { expires: 365 });
+    if (log != "" && log != null) {
+      Cookies.set('terakhirLogin', log, { expires: 365 });
+    }
+  }
+}
