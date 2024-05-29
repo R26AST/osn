@@ -1,0 +1,332 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: hsl(0 0% 100%);
+  --black-color: hsl(0 0% 0%);
+
+  /*========== Font family ==========*/
+  --body-font: 'Poppins', sans-serif;
+
+  /*========== Font sizes ==========*/
+  --h1-fs: 2rem;
+  --normal-fs: 1rem;
+  --small-fs: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --medium: 500;
+  --large: 600;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-fs);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+h1 {
+  font-weight: var(--medium);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== LOGIN & REGISTER ===============*/
+.form__wrapper {
+  height: 100vh;
+  background-image: url(../img/bg4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.form {
+  background-color: rgb(0,0,0,0.2);
+  /*background-color: hsl(0 0% 100% / 0.22);*
+  border: 2px solid hsl(0 0% 100% / 0.24); */
+  border: 2px solid hsl(0 0% 100% / 0.5);
+  width: 432px;
+  padding: 4rem 3rem 3.5rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s ease-in-out;
+}
+
+.form-active {
+  left: 50%;
+}
+
+.form__title {
+  text-align: center;
+  font-size: var(--h1-fs);
+  font-weight: var(--large);
+  margin-bottom: 2rem;
+}
+
+.form__subtitle {
+  margin-bottom: 1rem;
+  font-size: var(--small-fs);
+}
+
+
+.form__content {
+  display: grid;
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.form__box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  /*border-bottom: 2px solid var(--white-color);*/
+  
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.form__icon,
+.form__eye {
+  font-size: 1.25rem;
+}
+
+.form__icon {
+  margin-left: 17px;
+}
+
+.form__input {
+  width: 100%;
+  padding-block: 0.75rem;
+  background: none;
+  color: var(--white-color);
+}
+
+.form__box-input {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--medium);
+  transition: 0.3s;
+}
+
+.form__eye {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  cursor: pointer;
+}
+
+.form__check,
+.form__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__check {
+  margin-bottom: 1.5rem;
+}
+
+.form__check-label,
+.form__forgot,
+.login__register {
+  font-size: var(--small-fs);
+}
+
+.form__check-group {
+  column-gap: 0.5rem;
+}
+
+.form__check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.form__forgot {
+  color: var(--white-color);
+}
+
+.form__button {
+  width: 100%;
+  padding: 1rem;
+  /*border-radius: 0.5rem;*/
+  border-radius: 50px;
+  /*background-color: var(--white-color);*/
+  font-weight: var(--large);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  background-color: rgb(255,255,255,0.5);
+}
+
+.form__button:hover {
+  background-color: rgb(0,0,0,0.5);
+  color: var(--white-color);
+}
+
+.login__register {
+  text-align: center;
+}
+
+.login__register span {
+  font-weight: var(--medium);
+  cursor: pointer;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -12px;
+  font-size: var(--small-fs);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (max-width: 576px) {
+  .form {
+    width: calc(100% - 2rem);
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .form__title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Bahasa */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@500&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+KR:wght@500&family=Open+Sans:wght@400;500&display=swap");
+
+.dropdown button {
+  background-color: #253849;
+  min-width: 130px;
+  width: max-content;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+.dropdown button img {
+  margin: 0 5px 0 0;
+}
+.dropdown button img,
+.dropdown-content li img {
+  width: 20px;
+}
+.dropdown button,
+.dropdown-content li {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+   font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #fff transparent transparent transparent;
+  margin: 0 0 0 5px;
+}
+
+.dropdown button:hover {
+  cursor: pointer;
+  background-color: #3c5b77;
+}
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin: 1px 0 0 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow-y: scroll;
+  max-height: 250px;
+}
+/* Style for the dropdown content items */
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  justify-content: end;
+}
+.dropdown-content li img {
+  margin: 0 20px 0px 20px;
+}
+/* Style for the dropdown content items on hover */
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  color: blue;
+  border-radius: 5px;
+}
+/* Show the dropdown content when the dropdown button is clicked */
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+/* Animate the dropdown content */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropdown-content {
+  animation: slideIn 0.3s ease-out;
+}
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #c2c9d2;
+}
