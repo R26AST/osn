@@ -61,7 +61,7 @@
                     <div class="dropdown">
                         <a tabindex="0" class="d-inline-block nav-link dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
                             
-                            <span class="userbutton"><span class="usertext mr-1">ASTRONOMI &ndash; <script>document.write(localStorage.getItem('user'))</script></span><span class="avatars"><span class="avatar current"><span class="userinitials size-35">P2</span></span></span></span>
+                            <span class="userbutton"><span class="usertext mr-1">ASTRONOMI &ndash; <script>document.write(Cookies.get('user'))</script></span><span class="avatars"><span class="avatar current"><span class="userinitials size-35">P2</span></span></span></span>
                                 
                             <div class="caret"></div>
                         </a>
@@ -135,9 +135,9 @@
                 
                                 
                                 <form id="search" action="">
-                	<label for="coursesearchbox" class="lambda-sr-only">Search courses</label>						
+                	<label for="coursesearchbox" class="lambda-sr-only">Cari kursus</label>						
 					<input id="coursesearchbox" type="text" value="Search courses" name="search">
-					<button type="submit"><span class="lambda-sr-only">Submit</span></button>						
+					<button type="submit"><span class="lambda-sr-only">Ajukan</span></button>						
 				</form>
                                 
             </div>
@@ -219,12 +219,11 @@
 							<section class="node_category card d-inline-block w-100 mb-3">
 							<div class="card-body"><h3 class="lead">Detail Peserta</h3>
 							<ul>
-								<li class="contentnode"><dl><dt>Email address</dt><dd><a href="mailto:p%75%74%72%61kuru%6c%69%66%66%31%39%38%30@%67%6d%61%69l%2ec%6f%6d">putrakuruliff1980@gmail.com</a> (Visible to other course participants)</dd></dl></li>
 								<li class="contentnode"><dl><dt>Negara</dt><dd>Indonesia</dd></dl></li>
 								<li class="contentnode"><dl><dt>Zona Waktu</dt><dd>Asia/Jakarta</dd></dl></li>
-								<li class="contentnode"><dl><dt>Nomor Induk Siswa Nasional</dt><dd>0000000000</dd></dl></li>
+								<!--<li class="contentnode"><dl><dt>Nomor Induk Siswa Nasional</dt><dd>0000000000</dd></dl></li>
 								<li class="contentnode"><dl><dt>Kelas</dt><dd>11</dd></dl></li>
-								<li class="contentnode"><dl><dt>Jenis Kelamin</dt><dd>L</dd></dl></li>
+								<li class="contentnode"><dl><dt>Jenis Kelamin</dt><dd>L</dd></dl></li>-->
 								<li class="contentnode"><dl><dt>Nomor Pokok Sekolah Nasional/Kode Perguruan Tinggi</dt><dd>20322740</dd></dl></li>
 								<li class="contentnode"><dl><dt>Sekolah/Universitas</dt><dd>SMA NEGERI 2 BATANG</dd></dl></li>
 								<li class="contentnode"><dl><dt>Kurikulum</dt><dd>Kurikulum Merdeka</dd></dl></li>
@@ -270,7 +269,7 @@
 
     <div class="card-body p-3">
 
-            <h5 id="instance-10-header" class="card-title d-inline">Navigation</h5>
+            <h5 id="instance-10-header" class="card-title d-inline">Navigasi</h5>
 
 
         <div class="card-text content mt-3">
@@ -284,7 +283,9 @@
 					</ul>
 					</li>
 					<li class="type_system depth_2 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad1c1bb8712_group" aria-labelledby="random64bfad1c1bb875_label_2_9" tabindex="-1" aria-selected="false"><p class="tree_item branch canexpand" tabindex="-1"><a tabindex="-1" id="random64bfad1c1bb875_label_2_9">Kursusku</a></p>
-					<ul id="random64bfad1c1bb8712_group" role="group" tabindex="-1"><li class="type_course depth_3 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_7" data-node-key="7" data-node-type="20" aria-labelledby="random64bfad1c1bb8713_label_3_10" tabindex="-1" aria-selected="false"><p class="tree_item branch" id="expandable_branch_20_7" tabindex="-1"><a tabindex="-1" id="random64bfad1c1bb8713_label_3_10" title="OSN Astronomi" href="./Kursus.html">OSN-AST<script>document.write(new Date().getFullYear().toString().substr(-2))</script></a></p></li>
+					<ul id="random64bfad1c1bb8712_group" role="group" tabindex="-1">
+						<li class="type_course depth_3 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_7" data-node-key="7" data-node-type="20" aria-labelledby="random64bfad1c1bb8713_label_3_10" tabindex="-1" aria-selected="false"><p class="tree_item branch" id="expandable_branch_20_7" tabindex="-1"><a tabindex="-1" id="random64bfad1c1bb8713_label_3_10" title="TO OSN Astronomi" href="./Kursus.html">TO OSN-AST<script>document.write(new Date().getFullYear().toString().substr(-2))</script></a></p></li>
+						<li class="type_course depth_3 contains_branch" role="treeitem" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_7" data-node-key="7" data-node-type="20" aria-labelledby="random64bfad1c1bb8713_label_3_10" tabindex="-1" aria-selected="false"><p class="tree_item branch" id="expandable_branch_20_7" tabindex="-1"><a tabindex="-1" id="random64bfad1c1bb8713_label_3_10" title="OSN Astronomi" href="./osn.html">OSN-AST<script>document.write(new Date().getFullYear().toString().substr(-2))</script></a></p></li>
 					</ul>
 					</li>
 				</ul>
