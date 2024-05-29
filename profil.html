@@ -238,8 +238,8 @@
 							<section class="node_category card d-inline-block w-100 mb-3">
 							<div class="card-body"><h3 class="lead">Login activity</h3>
 							<ul>
-								<li class="contentnode"><dl><dt>Pertama kali mengakses situs</dt><dd class="pertamaLog"></dd></dl></li>
-								<li class="contentnode"><dl><dt>Terakhir mengakses situs</dt><dd class="terakhirLog"></dd></dl></li>
+								<li class="contentnode"><dl><dt>Pertama kali mengakses situs</dt><dd><script>document.write(Cookies.get('pertamaLogin'))</script></dd></dl></li>
+								<li class="contentnode"><dl><dt>Terakhir mengakses situs</dt><dd><script>document.write(Cookies.get('terakhirLogin'))</script></dd></dl></li>
 							</ul>
 							</div>
 							</section>
@@ -322,22 +322,13 @@
     	        
    	</div>
 	</footer>
-
 </div>
 
 
 
 
 
-<script>
-$(document).ready(function() {
-	$('.pertamaLog').append(Cookies.get('pertamaLoogin'));
-
-	$('terakhirLog').append(Cookies.get('terakhirLoogin'));
-});
-</script>
 
 
-</body>
 
-</html>
+</body></html>
