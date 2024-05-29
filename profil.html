@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Profil Publik</title>
     <link rel="shortcut icon" href="https://sains1-bpti.kemdikbud.go.id/pluginfile.php/1/theme_lambda/favicon/1685779320/favicon-32x32.png">
-    <meta name="keywords" content="moodle, PUTRAKU RULIFF ABBAS 23060331000330: Public profile">
+    <meta name="keywords" content="moodle, Public profile">
 	<link rel="stylesheet" type="text/css" href="https://sains1-bpti.kemdikbud.go.id/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css">
 	<link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1690283290990_19" href="https://sains1-bpti.kemdikbud.go.id/theme/yui_combo.php?3.17.2/cssbutton/cssbutton-min.css">
 	<link rel="stylesheet" type="text/css" href="https://sains1-bpti.kemdikbud.go.id/theme/styles.php/lambda/1685779320_1685770612/all">
@@ -235,19 +235,11 @@
 							</ul>
 							</div>
 							</section>
-							<!--<section class="node_category card d-inline-block w-100 mb-3">
-							<div class="card-body"><h3 class="lead">Privacy and policies</h3>
-							<ul>
-								<li><span><a href="https://sains1-bpti.kemdikbud.go.id/admin/tool/dataprivacy/summary.php">Data retention summary</a></span></li>
-							</ul>
-							</div>
-							</section>-->
-							
 							<section class="node_category card d-inline-block w-100 mb-3">
 							<div class="card-body"><h3 class="lead">Login activity</h3>
 							<ul>
-								<li class="contentnode"><dl><dt>Pertama kali mengakses situs</dt><dd><script>document.write(Cookies.get('pertamaLoogin'))</script></dd></dl></li>
-								<li class="contentnode"><dl><dt>Terakhir mengakses situs</dt><dd><script>document.write(Cookies.get('terakhirLoogin'))</script></dd></dl></li>
+								<li class="contentnode"><dl><dt>Pertama kali mengakses situs</dt><dd class="pertamaLog"></dd></dl></li>
+								<li class="contentnode"><dl><dt>Terakhir mengakses situs</dt><dd class="terakhirLog"></dd></dl></li>
 							</ul>
 							</div>
 							</section>
@@ -262,7 +254,6 @@
 							</ul>
 							</div>
 							</section>
-							<!--<section class="node_category card d-inline-block w-100 mb-3"><div class="card-body"><h3 class="lead">Miscellaneous</h3><ul><li><span><a href="https://sains1-bpti.kemdikbud.go.id/mod/forum/user.php?id=9398">Forum posts</a></span></li><li><span><a href="https://sains1-bpti.kemdikbud.go.id/mod/forum/user.php?id=9398&amp;mode=discussions">Forum discussions</a></span></li></ul></div></section>-->
 							<section class="node_category card d-inline-block w-100 mb-3">
 							<div class="card-body"><h3 class="lead">Laporan</h3>
 							<ul>
@@ -329,14 +320,24 @@
         
             		
     	        
-   	</div><div class="logininfo">You are logged in as <a href="https://sains1-bpti.kemdikbud.go.id/user/profile.php?id=9398" title="View profile">PUTRAKU RULIFF ABBAS 23060331000330</a> (<a href="https://sains1-bpti.kemdikbud.go.id/login/logout.php?sesskey=rFTU8g60No">Log out</a>)</div>	</footer>
+   	</div>
+	</footer>
+
 </div>
 
 
 
 
 
+<script>
+$(document).ready(function() {
+	$('.pertamaLog').text(Cookies.get('pertamaLoogin'));
+
+	$('terakhirLog').text(Cookies.get('terakhirLoogin'));
+});
+</script>
 
 
+</body>
 
-</body></html>
+</html>
