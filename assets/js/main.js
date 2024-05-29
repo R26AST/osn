@@ -72,7 +72,8 @@ $('.submit').click(function () {
 							if($('.pass').val() == userData["password"]) {
 								console.log("success");
 								success('Anda berhasil masuk');
-								setTimeout(function() {window.location.replace('https://r26ast.github.io/Dashboard');}, 2301);
+								Cookies.set('lastLogin', new Date(), { expires: 7 })
+								setTimeout(function() {window.location.replace('./dasbor');}, 2301);
 								
 							}
 							else {
