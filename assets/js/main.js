@@ -103,11 +103,10 @@ $('.submit').click(function () {
 });
 
 function cekCookie() {
-  let log = Cookies.get('terakhirLogin');
+  let log = Cookies.get('pertamaLogin');
   if (typeof log != "undefined") {
-    Cookies.set('terakhirLogin', new Date(), { expires: 365 });
+    Cookies.set('pertamaLogin', new Date());
   } else {
-    Cookies.set('pertamaLogin', new Date(), { expires: 365 });
     Cookies.set('terakhirLogin', new Date(), { expires: 365 });
   }
 }
