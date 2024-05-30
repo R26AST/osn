@@ -505,6 +505,11 @@
 </style>
 
 <script>
+if(typeof Cookies.get('user') === "undefined") {
+	window.location.replace('https://r26ast.github.io/osn/');
+}
+else {}
+
 $(document).ready(function() {
 	$('.usermenu').click(function() {
 		$('#action-menu-0-menu').toggle();
