@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400%7COpen+Sans:700" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 </head>
 
 <body id="page-course-view-topics" class="format-topics limitedwidth  path-course path-course-view chrome dir-ltr lang-id yui-skin-sam yui3-skin-sam sains1-bpti-kemdikbud-go-id pagelayout-course course-7 context-6744 category-5 columns3 has-region-side-pre has-region-side-post used-region-side-pre empty-region-side-post blockstyle-02 section-0-open jsenabled">
@@ -59,40 +62,34 @@
                             <div class="caret"></div>
                         </a>
                             <div class="dropdown-menu dropdown-menu-right menu" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu">
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/user/profile.php" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" tabindex="-1" aria-labelledby="actionmenuaction-1">
+                                        <a onclick="" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" tabindex="-1" aria-labelledby="actionmenuaction-1">
                                             <span class="menu-action-text" id="actionmenuaction-1">
                                                 Profil
                                             </span>
                                         </a>
                                         <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" tabindex="-1" aria-labelledby="actionmenuaction-2">
+                                        <a onclick="" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" tabindex="-1" aria-labelledby="actionmenuaction-2">
                                             <span class="menu-action-text" id="actionmenuaction-2">
                                                 Nilai
                                             </span>
                                         </a>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/calendar/view.php?view=month" class="dropdown-item menu-action" role="menuitem" data-title="calendar,core_calendar" tabindex="-1" aria-labelledby="actionmenuaction-3">
+                                        <a onclick="window.location.replace('kalender')" class="dropdown-item menu-action" role="menuitem" data-title="calendar,core_calendar" tabindex="-1" aria-labelledby="actionmenuaction-3">
                                             <span class="menu-action-text" id="actionmenuaction-3">
-                                                Kalender
+                                                Kalendar
                                             </span>
                                         </a>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/user/files.php" class="dropdown-item menu-action" role="menuitem" data-title="privatefiles,moodle" tabindex="-1" aria-labelledby="actionmenuaction-4">
+                                        <a onclick="" class="dropdown-item menu-action" role="menuitem" data-title="privatefiles,moodle" tabindex="-1" aria-labelledby="actionmenuaction-4">
                                             <span class="menu-action-text" id="actionmenuaction-4">
                                                 Berkas pribadi
                                             </span>
                                         </a>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/reportbuilder/index.php" class="dropdown-item menu-action" role="menuitem" data-title="reports,core_reportbuilder" tabindex="-1" aria-labelledby="actionmenuaction-5">
+                                        <a onclick="window.location.replace('kontak')" class="dropdown-item menu-action" role="menuitem" data-title="reports,core_reportbuilder" tabindex="-1" aria-labelledby="actionmenuaction-5">
                                             <span class="menu-action-text" id="actionmenuaction-5">
                                                 Laporan
                                             </span>
                                         </a>
                                         <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" tabindex="-1" aria-labelledby="actionmenuaction-6">
-                                            <span class="menu-action-text" id="actionmenuaction-6">
-                                                Preferensi
-                                            </span>
-                                        </a>
-                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
-                                        <a href="https://sains1-bpti.kemdikbud.go.id/login/logout.php?sesskey=rFTU8g60No" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" tabindex="-1" aria-labelledby="actionmenuaction-7">
+                                        <a onclick="window.location.replace('keluar')" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" tabindex="-1" aria-labelledby="actionmenuaction-7">
                                             <span class="menu-action-text" id="actionmenuaction-7">
                                                 Keluar
                                             </span>
@@ -499,12 +496,20 @@
 	</footer>
 </div>
 
+<style>
+.usermenu,
+.menu-action-text {
+	cursor: pointer;
+}
+</style>
 
+<script>
+$(document).ready(function() {
+	$('.usermenu').click(function() {
+		$('#action-menu-0-menu').toggle();
+	});
+});
+</script>
 
-
-
-
-
-
-
-</body></html>
+</body>
+</html>
