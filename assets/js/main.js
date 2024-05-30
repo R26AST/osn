@@ -104,13 +104,10 @@ $('.submit').click(function () {
 
 function cekCookie() {
   let log = Cookies.get('terakhirLogin');
-  if (log != "") {
+  if (typeof log != "undefined") {
     Cookies.set('terakhirLogin', new Date(), { expires: 365 });
   } else {
-    Cookies.set('pertamaLogin', new Date());
+    Cookies.set('pertamaLogin', new Date(), { expires: 365 });
     Cookies.set('terakhirLogin', new Date(), { expires: 365 });
-    if (log != "" && log != null) {
-      Cookies.set('terakhirLogin', log, { expires: 365 });
-    }
   }
 }
