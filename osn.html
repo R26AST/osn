@@ -377,7 +377,7 @@
             </li>
      <li id="section-2" class="section course-section main  clearfix" data-sectionid="2" data-sectionreturnid="0" data-for="section" data-id="33" data-number="2" data-indexed="true">
 		<div class="course-section-header d-flex" data-for="section_title" data-id="33" data-number="2">               
-			<a data-toggle="collapse" href="" id="collapssesection2" class="btn btn-icon mr-1 icons-collapse-expand stretched-link ">				
+			<a data-toggle="collapse" href="https://r26ast.github.io/CBT/" id="collapssesection2" class="btn btn-icon mr-1 icons-collapse-expand stretched-link ">				
 			</a>
 			<h4>OSN-K ASTRONOMI</h4>
 			<div data-region="sectionbadges" class="sectionbadges d-flex align-items-center">
@@ -401,7 +401,7 @@
 									</div>
 									<div class="media-body align-self-center">
 										<div class="activityname">
-											<a href="." class=" aalink stretched-link">        
+											<a href="https://r26ast.github.io/CBT/" class=" aalink stretched-link">        
 												<span class="instancename">OSN-K Astronomi <span class="accesshide "> URL</span></span>    
 											</a>
 										</div>
@@ -457,26 +457,29 @@
 							</a>
 						</p>
 					</li>
-					<li class="type_course depth_2 contains_branch" role="treeitem" aria-expanded="false" aria-owns="random64bfad38311215_group" aria-labelledby="random64bfad38311213_label_2_3" tabindex="-1" aria-selected="false"><p class="tree_item branch" tabindex="-1"><span tabindex="-1" id="random64bfad38311213_label_2_3" title="CBT Kemdikbud Indonesia">Laman situs</span></p>
+					<li class="laman_situs type_course depth_2 contains_branch" role="treeitem" aria-expanded="false" aria-owns="random64bfad38311215_group" aria-labelledby="random64bfad38311213_label_2_3" tabindex="-1" aria-selected="false">
+						<p class="tree_item branch" tabindex="-1">
+							<span tabindex="-1" id="random64bfad38311213_label_2_3" title="CBT Kemdikbud Indonesia">Laman situs</span>
+						</p>
 					</li>
 					
 					<li class="type_system depth_2 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad383112110_group" aria-labelledby="random64bfad38311213_label_2_9" tabindex="-1" aria-selected="false">
-						<p class="tree_item branch" tabindex="-1">
+						<p class="kursusku tree_item branch" tabindex="-1">
 							<a tabindex="-1" id="random64bfad38311213_label_2_9">Kursusku</a>
 						</p>
-						<ul id="random64bfad383112110_group" role="group" tabindex="-1">
-							<li class="type_course depth_3 contains_branch current_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad383112112_group" aria-labelledby="random64bfad383112111_label_3_10" tabindex="-1" aria-selected="false">
-								<p class="tree_item branch active_tree_node canexpand" tabindex="-1">
+						<ul class="isi_kursusku" role="group" tabindex="-1">
+							<li id="isi_kursusku" class="type_course depth_3 contains_branch current_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad383112112_group" aria-labelledby="random64bfad383112111_label_3_10" tabindex="-1" aria-selected="false">
+								<p class="osn-ast tree_item branch active_tree_node canexpand" tabindex="-1">
 									<a tabindex="-1" id="random64bfad383112111_label_3_10" title="OSN Astronomi">OSN-AST<script>document.write(new Date().getFullYear().toString().substr(-2))</script>
 									</a>
 								</p>
-								<ul id="random64bfad0eb3e8114_group" role="group" tabindex="-1">
-									<li class="type_structure depth_4 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad0eb3e8120_group" aria-labelledby="random64bfad0eb3e8115_label_4_14" tabindex="-1" aria-selected="false">
-										<p class="tree_item branch" tabindex="-1">
+								<ul class="isi_osn-ast" role="group" tabindex="-1">
+									<li id="isi_osn-ast" class="type_structure depth_4 contains_branch" role="treeitem" aria-expanded="true" aria-owns="random64bfad0eb3e8120_group" aria-labelledby="random64bfad0eb3e8115_label_4_14" tabindex="-1" aria-selected="false">
+										<p class="osn-k tree_item branch" tabindex="-1">
 											<a tabindex="-1" id="random64bfad0eb3e8115_label_4_14">OSN-K Astronomi <script>document.write(new Date().getFullYear())</script>
 											</a>
 										</p>
-										<ul id="random64bfad0eb3e8120_group" role="group" tabindex="-1">
+										<ul class="isi_osn-k" role="group" tabindex="-1">
 											<li class="type_activity depth_5 item_with_icon" role="treeitem" aria-labelledby="random64bfad0eb3e8121_label_5_15" tabindex="-1" aria-selected="false">
 												<p class="tree_item hasicon" tabindex="-1">
 													<a tabindex="-1" id="random64bfad0eb3e8121_label_5_15" title="Forum" onclick="window.location.replace('announcements')">
@@ -582,6 +585,19 @@ $(document).ready(function() {
 		$('#action-menu-0-menu').toggle();
 	});
 });
+
+/*$('.kursusku').click(function() {
+	$(".type_system").attr("aria-expanded", (_, attr) => attr == "true" ? "false" : "true");
+	$(".isi_kursusku").toggle();
+});
+$('.osn-ast').click(function() {
+	$("#isi_kursusku").attr("aria-expanded", (_, attr) => attr == "true" ? "false" : "true");
+	$(".isi_osn-ast").toggle();
+});
+$('.osn-k').click(function() {
+	$("#isi_osn-ast").attr("aria-expanded", (_, attr) => attr == "true" ? "false" : "true");
+	$(".isi_osn-k").toggle();
+});8/
 </script>
 
 </body>

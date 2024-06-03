@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400%7COpen+Sans:700" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous">
-	<link rel="stylesheet" href="./assets/dist/simple-calendar.css">
 	
 	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./assets/evo-calendar/css/evo-calendar.css">
     <link rel="stylesheet" type="text/css" href="./assets/evo-calendar/css/evo-calendar.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/evo-calendar/css/evo-calendar.orange-coral.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/evo-calendar/css/evo-calendar.midnight-blue.min.css">
@@ -25,6 +25,9 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 
 </head>
 
@@ -49,8 +52,9 @@
 
 				<div class="span6">
 			<div class="logo-header">
-				<a class="logo" href="https://sains1-bpti.kemdikbud.go.id/" title="Home">
-					<img src="https://sains1-bpti.kemdikbud.go.id/pluginfile.php/1/theme_lambda/logo/1685779320/BPTI%20Logo.png" class="img-responsive" alt="logo">				</a>
+				<a class="logo" title="Home">
+					<img src="https://sains1-bpti.kemdikbud.go.id/pluginfile.php/1/theme_lambda/logo/1685779320/BPTI%20Logo.png" class="img-responsive" alt="logo">				
+				</a>
 			</div>
 		</div>
 		      	
@@ -69,7 +73,7 @@
                     <div class="dropdown">
                         <a tabindex="0" class="d-inline-block nav-link dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
                             
-                            <span class="userbutton"><span class="usertext mr-1">ASTRONOMI &ndash; <script>document.write(Cookies.get('user'))</script></span><span class="avatars"><span class="avatar current"><span class="userinitials size-35">P2</span></span></span></span>
+                            <span class="userbutton"><span class="usertext mr-1">ASTRONOMI &ndash; <script>document.write(Cookies.get('user'))</script></span><span class="avatars"><span class="avatar current"><span class="userinitials size-35">AA</span></span></span></span>
                                 
                             <div class="caret"></div>
                         </a>
@@ -112,7 +116,7 @@
 
         </div>
 
-</div></div><a href="https://sains1-bpti.kemdikbud.go.id/user/view.php?id=9398&amp;course=7" class="d-inline-block aabtn"><span class="userinitials size-80">P2</span></a></div>
+</div></div><a class="d-inline-block aabtn"><span class="userinitials size-80">AA</span></a></div>
 						</div>
 					</div>
 
@@ -130,18 +134,18 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
 					<li>
-						<a title="Dasbor" href="https://sains1-bpti.kemdikbud.go.id/my/index.php">Dasbor</a>
+						<a title="Dasbor" onclick="window.location.replace('dasbor')">Dasbor</a>
 					</li>
 					<li>
-						<a title="Kursusku" href="https://sains1-bpti.kemdikbud.go.id/my/courses.php">Kursusku</a>
+						<a title="Kursusku">Kursusku</a>
 					</li>
 					<li>
 					</li>
                 </ul>
-				<form id="search" action="https://sains1-bpti.kemdikbud.go.id/course/search.php">
-                	<label for="coursesearchbox" class="lambda-sr-only">Search courses</label>						
+				<form id="search" action="">
+                	<label for="coursesearchbox" class="lambda-sr-only">Cari kursus</label>						
 					<input id="coursesearchbox" type="text" value="Search courses" name="search">
-					<button type="submit"><span class="lambda-sr-only">Submit</span></button>						
+					<button type="submit"><span class="lambda-sr-only">Ajukan</span></button>						
 				</form>
                                 
             </div>
@@ -423,7 +427,7 @@
     	<div class="row-fluid">
     		<p class="helplink"></p>
     		<div class="footnote"><p dir="ltr" style="text-align:left;"></p>
-<p dir="ltr">Copyright © 2023 | BPTI Kemdikbud</p><a href="http://www.freepik.com/">Designed using Freepik Wallpapers</a><br>
+<p dir="ltr">Copyright © <script>document.write(new Date().getFullYear())</script> | R26</p><a href="http://www.freepik.com/">Designed using Freepik Wallpapers</a><br>
 <p></p></div>		</div>
         
             		
@@ -445,56 +449,69 @@
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		
-<script src="./assets/dist/jquery.simple-calendar.js"></script>
 
-<script src="./evo-calendar/js/evo-calendar.min.js"></script>
 <script src="./assets/evo-calendar/js/evo-calendar-2.js"></script>
 
 <script>
-		$('#evoCalendar').addClass('event-hide');
-        $('#evoCalendar').evoCalendar({
-			language:'id',
-			theme: 'Royal Navy',
-			//theme: 'Orange Coral',
-            todayHighlight: true,
-            sidebarToggler: true,
-            eventListToggler: true,
-            canAddEvent: false,
-			format:'mm/dd/yyyy',
-			eventHeaderFormat:'d MM yyyy',
-            calendarEvents: [
-                { name: "Tahun Baru Masehi", date: new Date("2024-01-01"), type: "holiday", everyYear: true },
-                { name: "Hari Buruh", date: new Date("2024-05-01"), type: "holiday", everyYear: true },
-				{ name: "Hari Lahir Pancasila", date: new Date("2024-06-01"), type: "holiday", everyYear: true },
-				{ name: "Hari Kemerdekaan Indonesia", date: new Date("1945-08-17"), type: "holiday", everyYear: true },
-				{ name: "Hari Raya Natal", date: new Date("2024-12-25"), type: "holiday", everyYear: true },
-                { name: "Hari Raya Idulfitri", date: "April/10/2024", type: "event" },
-				{ name: "Hari Raya Idulfitri", date: "April/11/2024", type: "event" },
-				{ name: "Hari Raya Iduladha", date: "June/17/2024", type: "event" },
-                /*{ name: "Holiday #3", date: "February/3/2020", type: "holiday" },
-                { name: "Birthday #2", date: "February/3/2020", type: "birthday" },
-                { name: "Ulang Tahun R26", date: "June/11/2006", type: "birthday", everyYear: true },
-                { name: "Holiday #4", date: "February/15/2020", type: "event" },
-                { name: "Patient #2", date: "February/8/2020", type: "event" },
-                { name: "Leap day", date: "February/29/2020", type: "holiday", everyYear: true }*/
-            ],
-            onSelectDate: function() {
-                // console.log('onSelectDate!')
-            },
-            onAddEvent: function() {
-                console.log('onAddEvent!')
-            }
-        });
+/*if(typeof Cookies.get('user') === "undefined") {
+	window.location.replace('https://r26ast.github.io/osn/');
+}
+else {}*/
+
+$(document).ready(function() {
+	$('.usermenu').click(function() {
+		$('#action-menu-0-menu').toggle();
+	});
+});
+
+$('#evoCalendar').addClass('event-hide');
+$('#evoCalendar').evoCalendar({
+	language:'id',
+	theme: 'Royal Navy',
+	//theme: 'Orange Coral',
+	todayHighlight: true,
+	sidebarToggler: true,
+	eventListToggler: true,
+	canAddEvent: false,
+	format:'mm/dd/yyyy',
+	eventHeaderFormat:'d MM yyyy',
+	calendarEvents: [
+		{ name: "Tahun Baru Masehi", date: new Date("2024-01-01"), type: "holiday", everyYear: true },
+		{ name: "Hari Buruh", date: new Date("2024-05-01"), type: "holiday", everyYear: true },
+		{ name: "Hari Lahir Pancasila", date: new Date("2024-06-01"), type: "holiday", everyYear: true },
+		{ name: "Hari Kemerdekaan Indonesia", toString: "Hari Kemerdekaan Indonesia", date: new Date("1945-08-17"), type: "holiday", everyYear: true },
+		{ name: "Hari Raya Natal", date: new Date("2024-12-25"), type: "holiday", everyYear: true },
+		{ name: "Hari Raya Idulfitri", date: "April/10/2024", type: "event" },
+		{ name: "Hari Raya Idulfitri", date: "April/11/2024", type: "event" },
+		{ name: "Hari Raya Iduladha", date: "June/17/2024", type: "event" },
+		/*{ name: "Holiday #3", date: "February/3/2020", type: "holiday" },
+		{ name: "Birthday #2", date: "February/3/2020", type: "birthday" },
+		{ name: "Holiday #4", date: "February/15/2020", type: "event" },
+		{ name: "Patient #2", date: "February/8/2020", type: "event" },
+		{ name: "Leap day", date: "February/29/2020", type: "holiday", everyYear: true }*/
+	],
+	onSelectDate: function() {
+		// console.log('onSelectDate!')
+	},
+	onAddEvent: function() {
+		console.log('onAddEvent!')
+	}
+});
         // $("#evoCalendar").evoCalendar('addCalendarEvent', [...]);
 		 
-		 $('#sidebarToggler').click(function() {
-			//$("evoCalendar").attr("class", (_, attr) => attr == "event-hide" ? "" : "event-hide");
-			$("evoCalendar").toggleClass('event-hide', '');
-		 });
-    </script>
+$('#sidebarToggler').click(function() {
+	if(!$("#evoCalendar").hasClass('event-hide')) { 
+		$("#evoCalendar").addClass('event-hide');
+	}
+});
+$('#eventListToggler').click(function() {
+	if(!$("#evoCalendar").hasClass('sidebar-hide')) { 
+		$("#evoCalendar").addClass('sidebar-hide');
+	}
+});
+</script>
 
-
+<!--
 <script>
   var $calendar;
   $(document).ready(function () {
@@ -539,7 +556,7 @@
     });
     $calendar = container.data('plugin_simpleCalendar')
   });
-</script>
+</script>-->
 
 </body>
 </html>
