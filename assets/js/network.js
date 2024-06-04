@@ -1,7 +1,7 @@
 var time_start, end_time;
 
 // The size in bytes
-var downloadSize = 285375;//27900;
+var downloadSize = 278;//285375;//279000; 278Kb 
 var downloadImgSrc = new Image();
 
 $('#ping_server').click(function() {
@@ -14,12 +14,13 @@ $('#ping_server').click(function() {
 });
 
 function displaySpeed() {
-    var timeDuration = (end_time - time_start) / 1000;
-    var loadedBits = downloadSize * 8;
+    var timeDuration = (end_time - time_start) / 1;
+    var loadedBits = downloadSize * 1024 * 8;
     /* Converts a number into string
     using toFixed(2) rounding to 2 */
     var bps = (loadedBits / timeDuration).toFixed(2);
     var speedInKbps = (bps / 1024).toFixed(2);
+	var speedInMBps = (speedInKbps / 1024).toFixed(2);
 
     if(speedInKbps > 800)
     {
@@ -40,7 +41,8 @@ function displaySpeed() {
     if(mode == 1)
     {
         $('#network_status').html('<i class="fa fa-signal '+cls+'"></i> '+cls_txt);
-        $('#network_speed').html(speedInKbps+" Kbps");
+        //$('#network_speed').html(speedInKbps+" Kbps");
+		$('#network_speed').html(speedInMBps+" MBps");
     }
     else if(mode == 2)
     {
